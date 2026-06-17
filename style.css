@@ -1,0 +1,287 @@
+/* ===========================
+   CardZen - Premium Theme
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090909;
+    color:#fff;
+}
+
+/* Navbar */
+
+nav{
+    width:100%;
+    padding:22px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(9,9,9,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.logo{
+    font-size:34px;
+    font-weight:800;
+    color:#fff;
+}
+
+.logo span{
+    color:#D4AF37;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#ccc;
+    font-size:16px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#D4AF37;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    padding:130px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+}
+
+.left{
+    flex:1;
+}
+
+.left h1{
+    font-size:60px;
+    line-height:1.2;
+    font-weight:700;
+}
+
+.left h1 span{
+    display:block;
+    color:#D4AF37;
+}
+
+.left p{
+    margin-top:25px;
+    color:#bdbdbd;
+    font-size:18px;
+    line-height:1.8;
+    max-width:520px;
+}
+
+/* Google Button */
+
+#googleLogin{
+    margin-top:40px;
+    padding:16px 28px;
+    border:none;
+    border-radius:16px;
+    background:#fff;
+    color:#000;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#googleLogin img{
+    width:24px;
+}
+
+#googleLogin:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(255,255,255,.15);
+}
+
+/* Demo Card */
+
+.right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.demo-card{
+    width:380px;
+    height:230px;
+    border-radius:24px;
+    padding:28px;
+    background:linear-gradient(135deg,#1a1a1a,#0f0f0f);
+    border:1px solid rgba(212,175,55,.35);
+    box-shadow:0 0 40px rgba(212,175,55,.15);
+    transition:.35s;
+}
+
+.demo-card:hover{
+    transform:rotate(-2deg) scale(1.03);
+}
+
+.chip{
+    width:65px;
+    height:48px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#FFD700,#D4AF37);
+}
+
+.number{
+    margin-top:45px;
+    letter-spacing:5px;
+    font-size:24px;
+    font-weight:600;
+}
+
+.bottom{
+    margin-top:35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.bottom small{
+    color:#9f9f9f;
+}
+
+.bottom h3{
+    color:#D4AF37;
+    margin-top:5px;
+}
+
+.circle{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#FFD700,#D4AF37);
+}
+
+/* Features */
+
+.features{
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+}
+
+.feature{
+    background:#141414;
+    border:1px solid rgba(212,175,55,.12);
+    border-radius:22px;
+    padding:35px;
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-10px);
+    border-color:#D4AF37;
+    box-shadow:0 15px 35px rgba(212,175,55,.12);
+}
+
+.feature i{
+    font-size:36px;
+    color:#D4AF37;
+}
+
+.feature h2{
+    margin:20px 0 12px;
+}
+
+.feature p{
+    color:#b9b9b9;
+    line-height:1.7;
+}
+
+/* Footer */
+
+footer{
+    padding:60px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.06);
+    margin-top:60px;
+}
+
+footer h3{
+    color:#D4AF37;
+    font-size:28px;
+}
+
+footer p{
+    margin-top:10px;
+    color:#888;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#090909;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#D4AF37;
+    border-radius:20px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding-top:140px;
+}
+
+.left h1{
+    font-size:42px;
+}
+
+.left p{
+    margin:auto;
+    margin-top:20px;
+}
+
+#googleLogin{
+    margin:35px auto;
+}
+
+.nav-links{
+    display:none;
+}
+
+.demo-card{
+    width:100%;
+    max-width:360px;
+}
+
+}
