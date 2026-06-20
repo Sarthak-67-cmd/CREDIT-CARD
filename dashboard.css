@@ -1,111 +1,9 @@
 /* ==========================
-   CardZen Dashboard
+   Credit Card
 ========================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#0a0a0a;
-    color:#fff;
-}
-
-/* Navbar */
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:22px 8%;
-    background:#111;
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.logo{
-    font-size:32px;
-    font-weight:700;
-}
-
-.logo span{
-    color:#D4AF37;
-}
-
-.user{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.user img{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    border:2px solid #D4AF37;
-}
-
-/* Header */
-
-.header{
-    padding:40px 8% 20px;
-}
-
-.header h1{
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.header p{
-    color:#aaa;
-}
-
-/* Summary */
-
-.summary{
-    padding:20px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.box{
-    background:#171717;
-    border-radius:20px;
-    padding:25px;
-    border:1px solid rgba(212,175,55,.15);
-    transition:.3s;
-}
-
-.box:hover{
-    transform:translateY(-6px);
-    border-color:#D4AF37;
-}
-
-.box h3{
-    color:#bbb;
-    font-size:16px;
-}
-
-.box h1{
-    color:#D4AF37;
-    margin-top:12px;
-    font-size:34px;
-}
-
-/* Cards */
-
-.cards{
-    padding:30px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
-
 .credit-card{
-    height:200px;
+    height:220px;
     border-radius:22px;
     padding:25px;
     background:linear-gradient(135deg,#1b1b1b,#111);
@@ -116,115 +14,49 @@ nav{
 }
 
 .credit-card:hover{
-    transform:translateY(-8px) scale(1.02);
-    box-shadow:0 20px 35px rgba(212,175,55,.15);
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(212,175,55,.15);
 }
 
 .chip{
     width:60px;
-    height:45px;
-    border-radius:8px;
+    height:42px;
+    border-radius:10px;
     background:linear-gradient(135deg,#FFD700,#D4AF37);
+    margin-bottom:45px;
 }
 
 .credit-card p{
-    margin-top:50px;
-    font-size:24px;
+    font-size:22px;
     letter-spacing:4px;
     font-weight:600;
 }
 
 .credit-card span{
-    position:absolute;
-    bottom:25px;
+    display:block;
+    margin-top:18px;
     color:#D4AF37;
+    font-size:16px;
 }
 
-/* Buttons */
+/* Delete Button */
 
-.actions{
-    padding:20px 8% 100px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.actions button{
-    padding:18px;
+.delete-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:34px;
+    height:34px;
     border:none;
-    border-radius:16px;
+    border-radius:50%;
+    background:#ff4d4d;
+    color:white;
     cursor:pointer;
-    background:#D4AF37;
-    color:#000;
-    font-size:17px;
-    font-weight:600;
+    font-size:16px;
     transition:.3s;
 }
 
-.actions button:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 25px rgba(212,175,55,.25);
-}
-
-.actions button i{
-    margin-right:10px;
-}
-
-/* Bottom Navigation */
-
-footer{
-    position:fixed;
-    bottom:0;
-    width:100%;
-    background:#111;
-    display:flex;
-    justify-content:space-around;
-    padding:15px 0;
-    border-top:1px solid rgba(255,255,255,.08);
-}
-
-footer button{
-    background:none;
-    border:none;
-    color:#999;
-    cursor:pointer;
-    text-align:center;
-}
-
-footer button i{
-    font-size:20px;
-    margin-bottom:5px;
-}
-
-footer button.active{
-    color:#D4AF37;
-}
-
-/* Responsive */
-
-@media(max-width:768px){
-
-.header h1{
-    font-size:30px;
-}
-
-.credit-card{
-    height:180px;
-}
-
-.credit-card p{
-    font-size:20px;
-}
-
-nav{
-    padding:18px 5%;
-}
-
-.summary,
-.cards,
-.actions{
-    padding-left:5%;
-    padding-right:5%;
-}
-
+.delete-btn:hover{
+    background:#ff1f1f;
+    transform:scale(1.1);
 }
