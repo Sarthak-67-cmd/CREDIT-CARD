@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | CardZen</title>
+
+    <link rel="stylesheet" href="profile.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">
+            Card<span>Zen</span>
+        </div>
+
+        <a href="dashboard.html" class="back">
+            <i class="fas fa-arrow-left"></i>
+            Dashboard
+        </a>
+
+    </nav>
+
+    <!-- Profile Section -->
+
+    <section class="profile-container">
+
+        <div class="profile-card">
+
+            <img id="profileImage"
+                src="https://ui-avatars.com/api/?name=User&background=0f1117&color=d4af37&size=200"
+                alt="Profile">
+
+            <h2 id="userName">Guest User</h2>
+
+            <p id="userEmail">guest@example.com</p>
+
+            <div class="profile-info">
+
+                <div class="info-box">
+                    <i class="fas fa-credit-card"></i>
+                    <h3 id="cardCount">0</h3>
+                    <p>Saved Cards</p>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-wallet"></i>
+                    <h3 id="creditLimit">₹0</h3>
+                    <p>Total Credit</p>
+                </div>
+
+            </div>
+
+            <div class="profile-buttons">
+
+                <button id="editProfile">
+                    <i class="fas fa-user-edit"></i>
+                    Edit Profile
+                </button>
+
+                <button id="logout" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Edit Profile Modal -->
+
+    <div class="modal" id="profileModal">
+
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <h2>Edit Profile</h2>
+
+            <input
+                type="text"
+                id="editName"
+                placeholder="Your Name">
+
+            <input
+                type="email"
+                id="editEmail"
+                placeholder="Email Address">
+
+            <input
+                type="text"
+                id="editImage"
+                placeholder="Profile Image URL (optional)">
+
+            <button id="saveProfile">
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>
