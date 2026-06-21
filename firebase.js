@@ -1,21 +1,22 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// Import Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCTjnQCnwA5ziTJpDxhMwjpAFlE6HlUA8M",
   authDomain: "cardzen-bfc55.firebaseapp.com",
   projectId: "cardzen-bfc55",
   storageBucket: "cardzen-bfc55.firebasestorage.app",
   messagingSenderId: "695755978492",
-  appId: "1:695755978492:web:cad490848d8dab5d580979",
-  measurementId: "G-5LXBBQR1FX"
+  appId: "1:695755978492:web:cad490848d8dab5d580979"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+// Initialize Authentication
+const auth = getAuth(app);
+
+// Export auth
+export { auth };
