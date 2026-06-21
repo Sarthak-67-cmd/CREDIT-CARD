@@ -1,62 +1,239 @@
 /* ==========================
-   Credit Card
+   CARDZEN DASHBOARD
 ========================== */
 
-.credit-card{
-    height:220px;
-    border-radius:22px;
-    padding:25px;
-    background:linear-gradient(135deg,#1b1b1b,#111);
-    border:1px solid rgba(212,175,55,.25);
-    transition:.35s;
-    position:relative;
-    overflow:hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-.credit-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(212,175,55,.15);
+body{
+    background:#050505;
+    color:#fff;
+    min-height:100vh;
 }
 
-.chip{
-    width:60px;
-    height:42px;
-    border-radius:10px;
-    background:linear-gradient(135deg,#FFD700,#D4AF37);
-    margin-bottom:45px;
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
 }
 
-.credit-card p{
-    font-size:22px;
-    letter-spacing:4px;
-    font-weight:600;
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
 }
 
-.credit-card span{
-    display:block;
-    margin-top:18px;
-    color:#D4AF37;
-    font-size:16px;
+.logo{
+    font-size:42px;
+    font-weight:700;
 }
 
-/* Delete Button */
+.logo span{
+    color:#d8aa24;
+}
 
-.delete-btn{
-    position:absolute;
-    top:15px;
-    right:15px;
-    width:34px;
-    height:34px;
-    border:none;
+.profile{
+    width:70px;
+    height:70px;
     border-radius:50%;
-    background:#ff4d4d;
-    color:white;
-    cursor:pointer;
-    font-size:16px;
+    border:2px solid #d8aa24;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    color:#d8aa24;
+}
+
+/* GREETING */
+
+.greeting h1{
+    font-size:64px;
+    margin-bottom:10px;
+}
+
+.greeting p{
+    font-size:24px;
+    color:#9e9e9e;
+    margin-bottom:50px;
+}
+
+/* REMOVE OLD STATS SECTION */
+
+.stats,
+.stat-card,
+.card-count{
+    display:none;
+}
+
+/* TITLE */
+
+.section-title{
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+/* CARD */
+
+.credit-card{
+    position:relative;
+    background:linear-gradient(135deg,#111,#191919,#111);
+    border:1px solid rgba(216,170,36,.4);
+    border-radius:28px;
+    padding:35px;
+    margin-bottom:25px;
+    overflow:hidden;
     transition:.3s;
 }
 
-.delete-btn:hover{
-    background:#ff1f1f;
-    transform:scale(1.1);
+.credit-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+}
+
+.credit-card::after{
+    content:"";
+    position:absolute;
+    right:-120px;
+    bottom:-120px;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+            rgba(216,170,36,.12),
+            transparent 70%);
+}
+
+.chip{
+    width:58px;
+    height:45px;
+    background:#d8aa24;
+    border-radius:10px;
+    margin-bottom:45px;
+}
+
+.card-number{
+    font-size:36px;
+    letter-spacing:5px;
+    margin-bottom:35px;
+}
+
+.limit{
+    color:#bfbfbf;
+    font-size:20px;
+}
+
+.limit span{
+    color:#d8aa24;
+    font-weight:600;
+    margin-left:8px;
+}
+
+.delete-btn{
+    position:absolute;
+    top:25px;
+    right:25px;
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:50%;
+    background:#ff4b4b;
+    color:white;
+    cursor:pointer;
+    font-size:26px;
+}
+
+/* ADD CARD */
+
+.add-card{
+    border:2px dashed rgba(216,170,36,.5);
+    border-radius:20px;
+    text-align:center;
+    padding:28px;
+    margin-top:25px;
+    color:#d8aa24;
+    font-size:34px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.add-card:hover{
+    background:rgba(216,170,36,.08);
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#111;
+    border-top:1px solid rgba(216,170,36,.3);
+    display:flex;
+    justify-content:space-around;
+    padding:15px 0;
+    backdrop-filter:blur(20px);
+}
+
+.bottom-nav a{
+    text-decoration:none;
+    color:#aaa;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:14px;
+    transition:.3s;
+}
+
+.bottom-nav a.active{
+    color:#d8aa24;
+}
+
+.bottom-nav i{
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.container{
+padding:20px;
+}
+
+.logo{
+font-size:32px;
+}
+
+.greeting h1{
+font-size:44px;
+}
+
+.greeting p{
+font-size:18px;
+}
+
+.card-number{
+font-size:28px;
+letter-spacing:4px;
+}
+
+.credit-card{
+padding:25px;
+}
+
+.profile{
+width:58px;
+height:58px;
+font-size:24px;
+}
+
 }
